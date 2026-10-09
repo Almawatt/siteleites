@@ -5,4 +5,4 @@ declare namespace Cloudflare {
   }
 }
 
-declare namespace Cloudflare { interface Env { LAB_SETUP_OWNER_EMAIL?: string; } }
+declare namespace Cloudflare { interface Env { LAB_ADMIN_EMAIL?: string; LAB_ADMIN_PASSWORD_HASH?: string; LAB_ADMIN_PASSWORD_SALT?: string; } }
