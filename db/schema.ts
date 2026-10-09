@@ -1,0 +1,5 @@
+import {sqliteTable,text,index} from 'drizzle-orm/sqlite-core';
+export const posts=sqliteTable('posts',{id:text('id').primaryKey(),title:text('title').notNull(),summary:text('summary').notNull(),content:text('content').notNull(),category:text('category').notNull(),author:text('author').notNull(),status:text('status').notNull().default('draft'),created_at:text('created_at').notNull(),updated_at:text('updated_at').notNull()},t=>[index('idx_posts_status_created').on(t.status,t.created_at)]);
+export const labAccounts=sqliteTable('lab_accounts',{id:text('id').primaryKey(),email:text('email').notNull().unique(),password_hash:text('password_hash').notNull(),salt:text('salt').notNull(),created_at:text('created_at').notNull()});
+export const labSessions=sqliteTable('lab_sessions',{token_hash:text('token_hash').primaryKey(),account_id:text('account_id').notNull().references(()=>labAccounts.id),expires_at:text('expires_at').notNull()},t=>[index('idx_lab_sessions_expires').on(t.expires_at)]);
+export const labAttempts=sqliteTable('lab_attempts',{key:text('key').primaryKey(),count:text('count').notNull(),window_start:text('window_start').notNull()});

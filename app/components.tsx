@@ -1,0 +1,3 @@
+export function Brand(){return <a className="brand" href="/" aria-label="LabITec POA, início"><span className="logo"><img src="/brand-reference.png" alt="Logo LabITec POA"/></span><span><strong>LabITec POA</strong><small>CIÊNCIA · LEITE · QUALIDADE</small></span></a>}
+export function Header(){return <header className="header"><Brand/><nav aria-label="Navegação principal"><a href="/">O blog</a><a href="/#materias">Matérias</a><a className="admin-link" href="/admin">Área do laboratório</a></nav></header>}
+export function Footer(){return <footer><Brand/><p>Conhecimento que conecta o campo,<br/>o laboratório e você.</p><a href="/admin">Acesso administrativo</a><small>LabITec POA · Blog</small></footer>}

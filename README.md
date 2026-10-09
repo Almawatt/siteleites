@@ -25,4 +25,3 @@ A hospedagem atual é gerenciada por Sites. O manifesto .openai/hosting.json con
 ## Identidade visual
 
 Cores e logo baseados nas referências fornecidas. A foto ilustrativa está referenciada à Little Big Dairy no texto da matéria. Revise o conteúdo demonstrativo antes do uso institucional.
-
